@@ -48,7 +48,7 @@ def main():
     #customer
 
     customer1=Customer("Sakib Khan",100000,"12345678","sakibkhan@gmail.com","Gulshan-1")
-    order1=Order(customer1,[pizza3,burger1,pizza2,drink1,drink2])
+    order1=Order(customer1,[pizza3,burger1,pizza1,burger2,pizza2,drink1,drink2])
     customer1.place_order(order1)
     restaurant.add_order(order1)
     restaurant.receive_payment(order1,10000,customer1)
@@ -57,7 +57,7 @@ def main():
 
 
     customer2=Customer("Sakib Al hassan",100000,"12345678","sakibkhan@gmail.com","Gulshan-1")
-    order2=Order(customer2,[pizza1,burger1,pizza2,drink3])
+    order2=Order(customer2,[pizza1,burger1,pizza2,drink1,burger2,drink3])
     customer2.place_order(order2)
     restaurant.add_order(order2)
     restaurant.receive_payment(order2,10000,customer2)
@@ -66,6 +66,8 @@ def main():
 
     restaurant.pay_expense(restaurant.rent,"Rent")
     print("After RENT",restaurant.revenue,restaurant.balance)
+    restaurant.pay_salary(server)
+    print("After paying salary",restaurant.revenue,restaurant.balance)
 
 
 #call the main
